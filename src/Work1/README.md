@@ -1,5 +1,5 @@
-# 实验一：三维坐标变换与 MVP 矩阵推导
-
+# 实验二：三维坐标变换与 MVP 矩阵推导（GIF图在第七部分，需要等待片刻）
+## 202411081008 冯丹蕊 计算机科学与技术（公费师范）
 ## 一、实验目标
 
 1. 深入理解 3D 空间中的坐标变换流程（MVP 变换：Model-View-Projection）；
@@ -191,6 +191,7 @@ uv run -m src.Work1.main
 # 选做：3D 立方体插值旋转
 uv run -m src.Work1.main_cube
 ```
+<img width="803" height="121" alt="image" src="https://github.com/user-attachments/assets/88fbe9ad-2626-477e-9d0a-80c54516b441" />
 
 ### 交互说明
 
@@ -205,15 +206,14 @@ uv run -m src.Work1.main_cube
 ## 七、效果演示
 
 ### 必做：彩色线框三角形
-
-> 在此处插入 triangle_demo.gif
-
+<img width="784" height="720" alt="work1_triangle_demo" src="https://github.com/user-attachments/assets/6c7270af-3729-4b8c-9048-7a20a53354d4" />
 
 三条边分别以红、绿、蓝三色绘制，按 A/D 键可绕 Z 轴旋转，透视投影效果正确。
 
 ### 选做：3D 立方体姿态插值旋转
 
-> 在此处插入 cube_demo.gif
+<img width="720" height="720" alt="work1_cube_demo" src="https://github.com/user-attachments/assets/695ca547-444d-4950-a879-0c997ab36c9e" />
+
 
 
 立方体由 8 个顶点、12 条边构成，中心在原点，边长为 2。程序在绕 X 轴旋转（姿态1）与绕 Y 轴旋转（姿态2）之间进行矩阵线性插值，插值系数 $t$ 随角度正弦波动，实现两种姿态间的平滑过渡。
