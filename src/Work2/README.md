@@ -209,13 +209,15 @@ uv run -m src.Work2.main
 
 ### 必做：贝塞尔曲线交互渲染（含反走样）
 
-![贝塞尔曲线演示](./assets/bezier_demo.gif)
+<img width="720" height="752" alt="必做1" src="https://github.com/user-attachments/assets/c33dfbe5-7a7e-4ca8-a747-0de2a4d71b23" />
+
 
 逐步添加控制点后，程序实时绘制绿色贝塞尔曲线与灰色控制多边形。反走样通过 $3 \times 3$ 邻域距离加权实现，曲线边缘平滑无明显锯齿。按 `C` 键清空后可重新绘制。
 
 ### 选做：B 样条曲线模式切换
 
-![B 样条演示](./assets/bspline_demo.gif)
+<img width="720" height="752" alt="选做" src="https://github.com/user-attachments/assets/b89e4606-cded-4e79-b5ce-cf144c4d33e2" />
+
 
 按 `B` 键在两种模式间切换。在相同控制点下，贝塞尔曲线经过首尾控制点但受所有点影响（全局控制）；B 样条曲线不经过任何控制点，但移动局部控制点只影响曲线的对应一段（局部控制），体现了两种曲线方案的本质差异。
 
