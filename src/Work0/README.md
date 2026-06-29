@@ -157,6 +157,7 @@ uv run -m src.Work0.main
 | `[Taichi] Starting on architecture: opengl` | 调用集成显卡（OpenGL）      | ✅ 可用    |
 | `[Taichi] Starting on architecture: cpu`    | 未找到兼容 GPU，回退 CPU    | ⚠️ 帧率较低 |
 
+
 本机实际输出截图：
 
 <img width="808" height="168" alt="67572538526c3612c19d732fe43af94d" src="https://github.com/user-attachments/assets/d98836e3-bc84-4782-a4a6-5b4d3aec4465" />
@@ -165,7 +166,7 @@ uv run -m src.Work0.main
 
 ## 七、效果演示
 
-![Uploading hnih6-vzj8c——0.gif…]()
+<img width="880" height="720" alt="hnih6-vzj8c——0" src="https://github.com/user-attachments/assets/4f262385-60d2-49cd-9078-04bf7a42c628" />
 
 鼠标移动时，粒子群实时响应引力场变化，聚拢、散开并在边界弹射，GPU 并行计算保障了大规模粒子的流畅渲染。
 
