@@ -1,5 +1,4 @@
-```markdown
-# 实验三：Phong 光照模型与光线投射渲染（GIF图在第七部分，需要稍等片刻加载）
+# 实验三：Phong 光照模型与光线投射渲染（GIF图在第八部分，需要稍等片刻加载）
 
 **202411081008-冯丹蕊-计算机科学与技术（公费师范）**
 ---
@@ -306,12 +305,24 @@ uv run -m src.Work3.main
 ```
 
 程序启动后弹出 800×600 渲染窗口，右上角提供参数控制面板，调节任意滑动条后画面实时更新。
+<img width="803" height="636" alt="e23b5a84b93690a4a782a593f305f529" src="https://github.com/user-attachments/assets/a6712c15-58c9-4c9d-8250-e610880fc087" />
 
 ---
 
 ## 八、效果演示
+必做效果（4张gif图）：
+1. Ka (环境光系数): 范围 0.0 ~ 1.0，默认值 0.2。
+<img width="912" height="720" alt="1" src="https://github.com/user-attachments/assets/3bfb412b-0bea-4af5-a3ec-9306fba8e13f" />
+2. Kd (漫反射系数): 范围 0.0 ~ 1.0，默认值 0.7。
+<img width="1008" height="720" alt="2" src="https://github.com/user-attachments/assets/46c6670a-c307-4159-a08a-3e2218278ea9" />
+3. Ks (镜面高光系数): 范围 0.0 ~ 1.0，默认值 0.5。
+<img width="960" height="720" alt="3" src="https://github.com/user-attachments/assets/6d9b56a4-729f-4d94-80ad-b9beeb60085a" />
+4. Shininess (高光指数): 范围 1.0 ~ 128.0，默认值 32.0。
+<img width="976" height="720" alt="4" src="https://github.com/user-attachments/assets/71a58d8c-605f-40bd-841d-86bd55d0f4fe" />
 
-![Phong 光照演示](./assets/phong_demo.gif)
+选做效果：
+<img width="928" height="720" alt="选做1" src="https://github.com/user-attachments/assets/02e7e8c3-82c9-4907-b1e6-00738a3c3c34" />
+
 
 演示内容说明：
 
