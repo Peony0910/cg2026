@@ -1,4 +1,4 @@
-# 实验零：现代图形学开发环境搭建与万有引力粒子群仿真（GIF在第七部分）
+# 实验零：现代图形学开发环境搭建与万有引力粒子群仿真（GIF在第七部分，需要等待片刻显示）
 ## 202411081008 冯丹蕊 计算机科学与技术（公费师范）
 ## 一、实验背景与目的
 
@@ -167,7 +167,6 @@ uv run -m src.Work0.main
 ## 七、效果演示
 
 <img width="880" height="720" alt="hnih6-vzj8c——0" src="https://github.com/user-attachments/assets/4f262385-60d2-49cd-9078-04bf7a42c628" />
-<img width="880" height="720" alt="hnih6-vzj8c——0" src="https://github.com/user-attachments/assets/77726ac0-9d52-46b6-8d16-038a1f0d1379" />
 
 鼠标移动时，粒子群实时响应引力场变化，聚拢、散开并在边界弹射，GPU 并行计算保障了大规模粒子的流畅渲染。
 
