@@ -219,36 +219,45 @@ def prepare_posedirs(posedirs, expected_pose_dim):
 ### 5.3 阶段 (a)：模板网格 + 单关节权重热力图
 
 ![stage\_a](stage_a_template_weights.png)
+<img width="1077" height="1119" alt="stage_a_template_weights" src="https://github.com/user-attachments/assets/a602e712-6dc6-4da2-824f-9c734643c7da" />
+
 
 颜色越亮（黄绿）代表该顶点受第 18 关节（左肘）影响越强，集中分布在左前臂区域；躯干、腿部顶点颜色趋近深紫（权重接近 0）。此时网格处于 T-pose，未受任何形状或姿态参数影响。
 
 ### 5.4 阶段 (b)：形状校正 + 关节回归
 
 ![stage\_b](stage_b_shaped_joints.png)
+<img width="1077" height="1119" alt="stage_b_shaped_joints" src="https://github.com/user-attachments/assets/a6035759-200e-4a32-94f3-9cf248c19784" />
+
 
 设置 $\beta_0 = 2.0,\ \beta_1 = -1.2,\ \beta_2 = 0.8$ 后，网格体型发生明显变化，躯干和四肢比例与默认 T-pose 有所不同。叠加显示的关节点位于身体几何内部的合理解剖位置，验证了"关节随体型联动"的正确性。
 
 ### 5.5 阶段 (c)：姿态校正（Pose Blend Shapes）
 
 ![stage\_c](stage_c_pose_offsets.png)
+<img width="1077" height="1119" alt="stage_c_pose_offsets" src="https://github.com/user-attachments/assets/59166f2b-aa91-4340-b2f5-94b99a097e38" />
+
 
 颜色表示 `pose_offsets` 的 L2 范数大小，明显高亮区域集中在**肩部、肘部、髋部、膝盖**——正是设置了非零旋转的关节附近。躯干和末端偏移量接近零（深色），说明姿态校正仅在发生弯曲的区域产生几何修正。
 
 ### 5.6 阶段 (d)：最终 LBS 蒙皮结果
 
 ![stage\_d](stage_d_lbs_result.png)
+<img width="1077" height="1119" alt="stage_d_lbs_result" src="https://github.com/user-attachments/assets/ca75ae1d-361b-4fa9-94c4-044309a8aba1" />
 
 人体已进入目标姿态：双肩略微展开，双肘弯曲，左腿前迈，右膝微弯。关节点位于最终姿态下各骨骼的正确解剖位置。网格表面连续平滑，无明显穿插或折叠。
 
 ### 5.7 四阶段总对比图
 
 ![comparison\_grid](comparison_grid.png)
+<img width="2417" height="2176" alt="comparison_grid" src="https://github.com/user-attachments/assets/6ce732e9-4547-4656-bb9d-b18a69b3d12c" />
 
 从左上到右下清晰呈现四个阶段的递进关系：T-pose 模板 → 体型变化 → 局部姿态修正 → 最终骨骼驱动结果。
 
 ### 5.8 辅助图：全关节主导权重分布
 
 ![all\_joint\_weights](all_joint_weights.png)
+<img width="1517" height="1559" alt="all_joint_weights" src="https://github.com/user-attachments/assets/94e42014-5ae4-47b3-a094-9a790e4528cf" />
 
 每块面片根据"主导关节"上色（24 种色相均匀分布），颜色越亮表示该区域被某一关节高度主导。躯干过渡区域颜色复杂（多关节共同影响），四肢末端颜色单一（高度绑定到末端关节），与人体解剖学直觉吻合。
 
@@ -273,7 +282,13 @@ python run_lbs_lab.py --model-dir ./models --out-dir . \
 
 |                 Frame 01                |                 Frame 07                |                 Frame 13                |                 Frame 18                |                 Frame 24                |                 Frame 30                |
 | :-------------------------------------: | :-------------------------------------: | :-------------------------------------: | :-------------------------------------: | :-------------------------------------: | :-------------------------------------: |
-| ![f00](animation_frames/frame_0000.png) | ![f06](animation_frames/frame_0006.png) | ![f12](animation_frames/frame_0012.png) | ![f17](animation_frames/frame_0017.png) | ![f23](animation_frames/frame_0023.png) | ![f29](animation_frames/frame_0029.png) |
+| <img width="587" height="612" alt="frame_0006" src="https://github.com/user-attachments/assets/5857f479-0b1b-42e2-aa0f-aee0d5796a24" />
+| <img width="587" height="612" alt="frame_0000" src="https://github.com/user-attachments/assets/7ac86777-9ff9-40f2-9a03-353c15ce7f6a" />
+ | <img width="587" height="612" alt="frame_0012" src="https://github.com/user-attachments/assets/83fa1350-b6cf-4298-a51b-5b828125ff8b" />
+ | <img width="587" height="612" alt="frame_0012" src="https://github.com/user-attachments/assets/fc8ab927-3e87-4f97-b6a4-5040fa738d0d" />
+ |<img width="587" height="612" alt="frame_0023" src="https://github.com/user-attachments/assets/b57f37ab-9187-41ea-b18c-9b1ef9d40e76" />
+ | <img width="587" height="612" alt="frame_0029" src="https://github.com/user-attachments/assets/162f0f1b-d12d-48de-be12-6bdb25363071" />
+ |
 
 ### 6.3 观察结论
 
