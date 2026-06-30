@@ -279,7 +279,8 @@ for i in range(N * N):
 
 ### 6.1 必做：三种积分方法对比（阻尼 = 1.0）
 
-![阻尼=1.0 三种积分方法演示](./assets/damping_1.gif)
+<img width="589" height="576" alt="实验7必做" src="https://github.com/user-attachments/assets/0a9b7547-f136-4444-99a4-a8dbbe06960f" />
+
 
 **稳定性分析：**
 
@@ -295,7 +296,8 @@ for i in range(N * N):
 
 ### 6.2 选做：剪切 + 弯曲弹簧 + 球体碰撞（阻尼 = 1.0）
 
-![选做球体碰撞演示](./assets/bonus_collision.gif)
+<img width="576" height="589" alt="实验7选做" src="https://github.com/user-attachments/assets/4f107686-9f07-46f2-bd55-c27e35a24d8a" />
+
 
 **三类弹簧的视觉效果差异：**
 
