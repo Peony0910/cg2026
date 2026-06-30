@@ -165,6 +165,7 @@ for i in range(epochs):
 * 渲染结果完全不像奶牛，保持球形甚至更差；
 * Loss 曲线中 Normal Consistency 从第 0 轮就飙升至 1.0 以上，主导了整个 Total Loss；
 * 优化器的梯度被正则化项压制，剪影 Loss 几乎没有下降。
+<img width="1305" height="477" alt="e83f6ad07fd7b24c1d7cde394073db6e" src="https://github.com/user-attachments/assets/a471be70-7a18-4fd4-835b-6ed2c05c74b7" />
 
 **根本原因分析：** 从球体出发形变时，顶点大幅移动会瞬间产生很高的法线不一致惩罚。若 $w_{normal}$ 过大，优化器宁可保持球形不动也不愿承受法线惩罚，梯度信号被完全抑制。
 
@@ -172,8 +173,8 @@ for i in range(epochs):
 
 
 对应的渲染结果形状几乎没有优化，颜色更是一片混乱：
+<img width="1330" height="627" alt="b41c285d2d7f91280cbbb077f8e37ef7" src="https://github.com/user-attachments/assets/a2525a7a-c9a9-4f51-a731-9b2ae546b95c" />
 
-![初版渲染结果失败](./assets/bonus_result_bad.png)
 
 #### 5.1.2 问题二：形状与颜色同步优化互相干扰
 
@@ -265,14 +266,17 @@ with torch.no_grad():
 ## 六、实验结果
 
 ### 6.1 必做结果
+初始：<img width="1058" height="567" alt="ae0af047c158236a814fec6188f0b0c7" src="https://github.com/user-attachments/assets/333298d1-6a0e-4269-be6f-578b70f51860" />
 
 优化 300 轮后，球体逐渐变形为与奶牛轮廓高度吻合的网格，多视角剪影均与目标剪影接近。
+<img width="1010" height="568" alt="bf7cac41cccda0b5b1ff3053b1ebaf6f" src="https://github.com/user-attachments/assets/fd29c1a9-03c9-41ba-9789-943bd3bdf001" />
 
-![必做剪影优化结果](./assets/required_result.png)
+
 
 ### 6.2 选做 Loss 曲线分析
 
-![选做 Loss 曲线](./assets/bonus_loss_curve.png)
+<img width="1292" height="479" alt="ab8c896c3076d0bf372e223ed47692f9" src="https://github.com/user-attachments/assets/d7fa2afd-378c-4536-911d-55ab0136be1d" />
+
 
 **阶段一（0~300 轮）：**
 
@@ -287,7 +291,8 @@ with torch.no_grad():
 
 ### 6.3 选做最终渲染结果
 
-![选做最终结果对比](./assets/bonus_final_result.png)
+<img width="1273" height="723" alt="e20fb9bd33d9e70e30a903a71d602b31" src="https://github.com/user-attachments/assets/5d293bcf-d81f-4b59-a9cc-59be0a9f0204" />
+
 
 结果图按行排列：
 
