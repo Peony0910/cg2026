@@ -1,4 +1,4 @@
-# 实验四：Whitted-Style 光线追踪（GIF图在第九部分，需要稍等片刻加载）
+# 实验五：Whitted-Style 光线追踪（GIF图在第九部分，需要稍等片刻加载）
 
 **202411081008-冯丹蕊-计算机科学与技术（公费师范）**
 
@@ -297,6 +297,7 @@ with gui.sub_window("Controls", 0.70, 0.05, 0.28, 0.32):
 | 切换按钮         | —                      | 漫反射       | 切换左球为玻璃材质，观察折射与菲涅耳效果     |
 
 ---
+<img width="803" height="639" alt="cbc37a225d49590195cf2f7cebb42340" src="https://github.com/user-attachments/assets/137cea6b-730f-49b8-b28b-3926268d99f1" />
 
 ## 八、运行方式
 
@@ -309,14 +310,18 @@ uv run -m src.Work4.main
 ## 九、效果演示
 
 ### 必做：硬阴影 + 镜面反射
+<img width="730" height="576" alt="必做1" src="https://github.com/user-attachments/assets/ab57b637-f569-4e0e-9e9f-b78e669d97e3" />
+<img width="730" height="576" alt="必做2_edited" src="https://github.com/user-attachments/assets/d196d07f-d38d-4939-b8c5-df3ccfcff7f7" />
+<img width="912" height="720" alt="必做3_edited" src="https://github.com/user-attachments/assets/d1f9a466-8c7b-4cd8-8150-4b6b7e2a7155" />
 
-![光线追踪演示](./assets/raytrace_demo.gif)
 
 右侧镜面球反射出场景中的红球、棋盘格地板与背景；拖动 Light X/Y/Z 滑动条，阴影实时跟随光源移动；将 Max Bounces 调为 1 时镜面球变黑（无弹射），调大后可见镜中镜的多次反射效果。
 
 ### 选做：玻璃折射 + MSAA 抗锯齿
 
-![玻璃材质演示](./assets/glass_demo.gif)
+<img width="717" height="576" alt="选做1_edited (1)" src="https://github.com/user-attachments/assets/dc1968d4-e5a3-40a1-b2a3-960085068dc6" />
+<img width="730" height="576" alt="选做2_edited" src="https://github.com/user-attachments/assets/fb92a56b-ea9e-43a1-b526-fc2a5e7d3f77" />
+
 
 切换至玻璃模式后，左球变为透明玻璃材质：球体边缘出现菲涅耳反射高光，球体内部可见折射后的背景场景，大入射角（掠射）处反射比例明显升高。将 MSAA Samples 从 1 调至 8，物体边缘的阶梯状锯齿逐渐平滑为连续过渡。
 
